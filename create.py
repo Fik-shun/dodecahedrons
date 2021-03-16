@@ -21,30 +21,25 @@ print("Vertices for GL:")
 for v in range(n):
 
 	r,g,b = [random.random(), random.random(), random.random()]
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v-2][0],verts[2*v-2][1],verts[2*v-2][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v-1][0],verts[2*v-1][1],verts[2*v-1][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v][0],verts[2*v][1],verts[2*v][2], r,g,b))
-	print()
-
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v-1][0],verts[2*v-1][1],verts[2*v-1][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v][0],verts[2*v][1],verts[2*v][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v+1][0],verts[2*v+1][1],verts[2*v+1][2], r,g,b))
-	print()
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v-2][0],verts[2*v-2][1],verts[2*v-2][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v-1][0],verts[2*v-1][1],verts[2*v-1][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v][0],verts[2*v][1],verts[2*v][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v-1][0],verts[2*v-1][1],verts[2*v-1][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v][0],verts[2*v][1],verts[2*v][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v+1][0],verts[2*v+1][1],verts[2*v+1][2], r,g,b))
 
 
 tr,tg,tb = [random.random(), random.random(), random.random()]
 for v in range(1,n-1):
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[0][0],verts[0][1],verts[0][2], tr,tg,tb))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v][0],verts[2*v][1],verts[2*v][2], tr,tg,tb))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v+2][0],verts[2*v+2][1],verts[2*v+2][2], tr,tg,tb))
-	print()
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[0][0],verts[0][1],verts[0][2], tr,tg,tb))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v][0],verts[2*v][1],verts[2*v][2], tr,tg,tb))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v+2][0],verts[2*v+2][1],verts[2*v+2][2], tr,tg,tb))
 
 br,bg,bb = [random.random(), random.random(), random.random()]
 for v in range(1,n-1):
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[1][0],verts[1][1],verts[1][2], br,bg,bb))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v+1][0],verts[2*v+1][1],verts[2*v+1][2], br,bg,bb))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v+3][0],verts[2*v+3][1],verts[2*v+3][2], br,bg,bb))
-	print()
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[1][0],verts[1][1],verts[1][2], br,bg,bb))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v+1][0],verts[2*v+1][1],verts[2*v+1][2], br,bg,bb))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[2*v+3][0],verts[2*v+3][1],verts[2*v+3][2], br,bg,bb))
 
 print()
 print()
@@ -69,16 +64,14 @@ print("Vertices for GL:")
 for v in range(n):
 
 	r,g,b = [random.random(), random.random(), random.random()]
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[v-1][0],verts[v-1][1],verts[v-1][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[v][0],verts[v][1],verts[v][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (top[0],top[1],top[2], r,g,b))
-	print()
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[v-1][0],verts[v-1][1],verts[v-1][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[v][0],verts[v][1],verts[v][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (top[0],top[1],top[2], r,g,b))
 
 	r,g,b = [random.random(), random.random(), random.random()]
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[v-1][0],verts[v-1][1],verts[v-1][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[v][0],verts[v][1],verts[v][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (bottom[0],bottom[1],bottom[2], r,g,b))
-	print()
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[v-1][0],verts[v-1][1],verts[v-1][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[v][0],verts[v][1],verts[v][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (bottom[0],bottom[1],bottom[2], r,g,b))
 
 print()
 print()
@@ -107,17 +100,15 @@ print("Vertices for GL:")
 for v in range(n):
 
 	r,g,b = [random.random(), random.random(), random.random()]
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[v-1][0],verts[v-1][1],verts[v-1][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[v][0],verts[v][1],verts[v][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (top[0],top[1],top[2], r,g,b))
-	print()
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[v-1][0],verts[v-1][1],verts[v-1][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[v][0],verts[v][1],verts[v][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (top[0],top[1],top[2], r,g,b))
 
 r,g,b = [random.random(), random.random(), random.random()]
 for v in range(1,n-1):
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[0][0],verts[0][1],verts[0][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[v][0],verts[v][1],verts[v][2], r,g,b))
-	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[v+1][0],verts[v+1][1],verts[v+1][2], r,g,b))
-	print()
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[0][0],verts[0][1],verts[0][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[v][0],verts[v][1],verts[v][2], r,g,b))
+	print("%.2ff, %.2ff, %.2ff,   %.2ff, %.2ff, %.2ff," % (verts[v+1][0],verts[v+1][1],verts[v+1][2], r,g,b))
 
 
 print()

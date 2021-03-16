@@ -11,6 +11,7 @@ To start:
     
     ./a.out
 
+You may use create.py to create vertices of the dodecahedrons with random face colors.
 
 ## Q1. Modelling
 
@@ -37,9 +38,15 @@ The 3 Models chosen are:
 |    R     |  Obj: ACW rotate about z |
 |    F     |  Cam: CW spin around obj |
 |    G     | Cam: ACW spin around obj |
-|    ↑     |      Cam: move up        |
-|    ↓     |      Cam: move down      |
+|    ↑     |    Cam: move forward     |
+|    ↓     |    Cam: move backward    |
 |    →     |      Cam: move right     |
 |    ←     |      Cam: move left      |
+|    L     |      Cam: move up        |
+|    K     |      Cam: move down      |
+|    I     |  Cam: move to Position1  |
+|    O     |  Cam: move to Position2  |
+|    P     |  Cam: move to Position3  |
 |   Esc    |           Quit           |
+
 
