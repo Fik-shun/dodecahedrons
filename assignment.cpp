@@ -21,9 +21,12 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 
-const float objTranslationSpeed = 0.0001f;
+const float objTranslationSpeed = 0.01f;
 const float objRotationSpeed = 1.0f;
+const float cameraSpinSpeed = 0.02f;
+const float cameraRadius = 3.0f;
 
+float cameraSpin = 0.0f;
 float ObjZRotation = 0.0f;
 glm::vec3 ObjTranslation = glm::vec3(0.0f,0.0f,0.0f);
 
@@ -495,13 +498,7 @@ int main()
 	// TRANSFORMATION MATRICES
 	// =================================================================================================
 
-	// Model Matrix
-	glm::mat4 model = glm::mat4(1.0f);
 
-	// View Matrix
-	glm::mat4 view = glm::mat4(1.0f);
-	// note that we're translating the scene in the reverse direction of where we want to move
-	view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f)); 
 
 	// Projection Matrix
 	glm::mat4 projection;
@@ -532,10 +529,16 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
-		// Translation & Rotation
+		// Model Matrix
+		glm::mat4 model = glm::mat4(1.0f);
 		model = glm::translate(model, ObjTranslation);
 		model = glm::rotate(model, glm::radians(ObjZRotation), glm::vec3(0.0, 0.0, 1.0));
 
+		// View Matrix
+		glm::mat4 view = glm::mat4(1.0f);
+		float camX = sin(cameraSpin) * cameraRadius;
+		float camZ = cos(cameraSpin) * cameraRadius;
+		view = glm::lookAt(glm::vec3(camX, 0.0, camZ), glm::vec3(0.0, 0.0, 0.0), glm::vec3(0.0, 1.0, 0.0));
 
 
 		int modelLocation = glGetUniformLocation(shaderProgram, "model");
@@ -645,6 +648,11 @@ void processInput(GLFWwindow *window)
     if(glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS)
     	ObjZRotation += -objRotationSpeed;
 
+    if(glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS)
+    	cameraSpin += cameraSpinSpeed;
+
+    if(glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS)
+    	cameraSpin += -cameraSpinSpeed;
 
 }
 

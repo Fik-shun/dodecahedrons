@@ -25,7 +25,7 @@ for v in range(n):
 	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v-1][0],verts[2*v-1][1],verts[2*v-1][2], r,g,b))
 	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v][0],verts[2*v][1],verts[2*v][2], r,g,b))
 	print()
-	r,g,b = [random.random(), random.random(), random.random()]
+
 	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v-1][0],verts[2*v-1][1],verts[2*v-1][2], r,g,b))
 	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v][0],verts[2*v][1],verts[2*v][2], r,g,b))
 	print("%.3ff, %.3ff, %.3ff,   %.3ff, %.3ff, %.3ff," % (verts[2*v+1][0],verts[2*v+1][1],verts[2*v+1][2], r,g,b))
